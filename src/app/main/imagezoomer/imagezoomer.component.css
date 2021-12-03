@@ -1,0 +1,31 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.imagezoomer {
+  /* background-color: pink;
+  width: 90%;
+  margin: 100px auto; */
+  display: flex;
+  /* padding: 20px; */
+}
+
+.box {
+  background-color: rgb(43, 192, 202);
+  height: 250px;
+  border: rgb(210, 210, 231) solid 3px;
+  flex: 1;
+  transition: 1s;
+}
+
+.box:hover {
+  flex: 3;
+  object-fit: cover;
+}
+
+.box1_img {
+  object-fit: fill;
+  max-width: 100%;
+}
