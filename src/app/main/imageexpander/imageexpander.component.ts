@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-imagezoomer',
-  templateUrl: './imagezoomer.component.html',
-  styleUrls: ['./imagezoomer.component.css'],
+  selector: 'app-imageexpander',
+  templateUrl: './imageexpander.component.html',
+  styleUrls: ['./imageexpander.component.css'],
 })
-export class ImagezoomerComponent implements OnInit {
+export class ImageexpanderComponent implements OnInit {
   images: any;
-  backImage: any;
-  dummyImages: any;
+
   constructor() {}
 
   ngOnInit(): void {

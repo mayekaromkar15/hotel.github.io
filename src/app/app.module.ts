@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,10 @@ import { ReservationComponent } from './main/reservation/reservation.component';
 import { NavbarComponent } from './main/navbar/navbar.component';
 import { ImagezoomerComponent } from './main/imagezoomer/imagezoomer.component';
 import { ImageoverlapComponent } from './main/imageoverlap/imageoverlap.component';
-
+import { ImagerotateComponent } from './main/imagerotate/imagerotate.component';
+import { ImageexpanderComponent } from './main/imageexpander/imageexpander.component';
+import { TestimonalComponent } from './main/testimonal/testimonal.component';
+import { ContactusComponent } from './main/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,11 @@ import { ImageoverlapComponent } from './main/imageoverlap/imageoverlap.componen
     ReservationComponent,
     NavbarComponent,
     ImagezoomerComponent,
-    ImageoverlapComponent
+    ImageoverlapComponent,
+    ImagerotateComponent,
+    ImageexpanderComponent,
+    TestimonalComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +44,9 @@ import { ImageoverlapComponent } from './main/imageoverlap/imageoverlap.componen
     NgbModule,
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
