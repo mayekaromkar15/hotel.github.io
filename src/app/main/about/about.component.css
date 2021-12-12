@@ -1,9 +1,9 @@
 .container-fluid {
   display: flex;
   flex-direction: column;
-  /* background-color: lightblue; */
-  background-image: url(../../../assets/images/aboutUsWaves.PNG);
-  height: 80%;
+  background-color: #d97373;
+  /* background-image: url(../../../assets/images/aboutUsWaves.PNG); */
+  height: 100%;
 }
 
 .aboutus {

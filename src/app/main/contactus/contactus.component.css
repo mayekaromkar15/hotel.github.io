@@ -12,8 +12,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   /* background-color: red; */
+  height: auto;
   box-sizing: border-box;
-  margin: 40px 30%;
+  margin: 80px 30%;
+  border: 1px solid rgb(187, 170, 170);
+  border-radius: 20px;
 }
 .contactusheading {
   /* background-color: chartreuse; */

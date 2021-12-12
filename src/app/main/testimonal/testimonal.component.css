@@ -7,11 +7,12 @@
   justify-content: space-evenly;
   z-index: 2;
   position: relative;
-  background: linear-gradient(
+  /* background: linear-gradient(
     rgb(167, 156, 156),
     rgb(24, 23, 23),
     rgb(59, 56, 56)
-  );
+  ); */
+  background-color: #d96941;
   height: 100%;
 }
 

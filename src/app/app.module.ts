@@ -20,6 +20,7 @@ import { ImagerotateComponent } from './main/imagerotate/imagerotate.component';
 import { ImageexpanderComponent } from './main/imageexpander/imageexpander.component';
 import { TestimonalComponent } from './main/testimonal/testimonal.component';
 import { ContactusComponent } from './main/contactus/contactus.component';
+import { ParallexComponent } from './main/parallex/parallex.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ContactusComponent } from './main/contactus/contactus.component';
     ImageexpanderComponent,
     TestimonalComponent,
     ContactusComponent,
+    ParallexComponent,
   ],
   imports: [
     BrowserModule,

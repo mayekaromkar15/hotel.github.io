@@ -1,6 +1,6 @@
 .home__navbar {
   display: flex;
-  background-color: transparent;
+  background-color: black;
   color: white;
   align-items: center;
   position: relative;
@@ -9,6 +9,7 @@
   z-index: 10;
   font-size: 16px;
   font-weight: 500;
+  opacity: 0.2;
 }
 
 .home_navbar_logo {
@@ -16,7 +17,6 @@
   width: 80px;
   object-fit: contain;
   margin: 0 10px;
-  /* margin-top: 10px; */
 }
 
 .home__navbar__home {
@@ -63,3 +63,83 @@
   margin-left: 2px;
   margin-right: 5px;
 }
+
+/* ========================================================================== */
+/* .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid .navbar__main {
+  display: flex;
+  height: 150px;
+  flex-wrap: wrap;
+}
+
+.container-fluid .navbar__main .col__1 {
+  flex: 1;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+.container-fluid .navbar__main .col__1 .col__1__row1 {
+  flex: 1;
+  background-color: rgb(0, 162, 255);
+}
+.container-fluid .navbar__main .col__1 .col__1__row2 {
+  flex: 1;
+  background-color: rgb(49, 80, 99);
+}
+.container-fluid .navbar__main .col__1 .col__1__row3 {
+  flex: 1;
+  background-color: rgb(123, 184, 219);
+}
+.container-fluid .navbar__main .col__2 {
+  flex: 1;
+  background-color: yellow;
+  width: auto;
+  height: 100%;
+  flex: 0.3;
+}
+
+.container-fluid .navbar__main .col__2 > img {
+  height: 100%;
+  width: 100%;
+  padding: 1px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  background: linear-gradient(90deg, #0a0a0a);
+}
+
+.container-fluid .navbar__main .col__3 {
+  flex: 1;
+  background-color: chartreuse;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid .navbar__main .col__3 .col__3__row1 {
+  background-color: peru;
+  flex: 1;
+}
+.container-fluid .navbar__main .col__3 .col__3__row2 {
+  background-color: rgb(83, 52, 21);
+  flex: 1;
+}
+.container-fluid .navbar__main .col__3 .col__3__row3 {
+  display: flex;
+  flex: 1;
+}
+.container-fluid .navbar__main .col__3 .col__3__row3 .col__3__row3__col1 {
+  background-color: orange;
+  flex: 1;
+}
+.container-fluid .navbar__main .col__3 .col__3__row3 .col__3__row3__col2 {
+  background-color: rgb(119, 105, 79);
+  flex: 1;
+}
+.container-fluid .navbar__main .col__3 .col__3__row3 .col__3__row3__col3 {
+  background-color: rgb(238, 209, 156);
+  flex: 1;
+} */
