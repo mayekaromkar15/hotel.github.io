@@ -12,7 +12,7 @@
     rgb(24, 23, 23),
     rgb(59, 56, 56)
   ); */
-  background-color: #d96941;
+  background-color: #5aace6;
   height: 100%;
 }
 
@@ -52,15 +52,16 @@
 .quote .box.box1:hover {
   background: linear-gradient(#03a9f4, #e91e63);
   opacity: 1;
+  transition: 2s;
 }
 .quote .box.box2:hover ~ .bg,
 .quote .box.box2:hover {
-  background: linear-gradient(#ffc107, #19fd36);
+  background: linear-gradient(#36ace2, #410b1d);
   opacity: 1;
 }
 .quote .box.box3:hover ~ .bg,
 .quote .box.box3:hover {
-  background: linear-gradient(#ffc107, #e91e63);
+  background: linear-gradient(#8cbacf, #c98ca1);
   opacity: 1;
 }
 
