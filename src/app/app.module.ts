@@ -21,6 +21,7 @@ import { ImageexpanderComponent } from './main/imageexpander/imageexpander.compo
 import { TestimonalComponent } from './main/testimonal/testimonal.component';
 import { ContactusComponent } from './main/contactus/contactus.component';
 import { ParallexComponent } from './main/parallex/parallex.component';
+import { AboutusComponent } from './main/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ParallexComponent } from './main/parallex/parallex.component';
     TestimonalComponent,
     ContactusComponent,
     ParallexComponent,
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,
