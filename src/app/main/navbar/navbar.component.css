@@ -1,15 +1,14 @@
 .home__navbar {
   display: flex;
-  background-color: black;
-  color: white;
+  background-color: transparent;
+  color: rgb(255, 254, 254);
   align-items: center;
-  position: relative;
+  /* position: relative; */
   margin-top: 50px;
   position: absolute;
   z-index: 10;
   font-size: 16px;
   font-weight: 500;
-  opacity: 0.2;
 }
 
 .home_navbar_logo {
@@ -50,6 +49,17 @@
   position: absolute;
   right: 5%;
 }
+
+.home__navbar__ContactUs:hover,
+.home__navbar__AboutUs:hover,
+.home__navbar__home:hover,
+.home__navbar__searchIcon:hover {
+  background-color: white;
+  color: black;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
 .home__navbar__ContactUs {
   display: flex;
   margin-right: 10px;

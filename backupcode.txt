@@ -1,0 +1,161 @@
+Image Rotate backup code.
+
+-- start imagerotate.component.css
+
+/* .box {
+  width: 100%;
+  height: 100%;
+  background-color: #6fe7fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.box_image_txt_row1 {
+  display: flex;
+}
+
+.box_image_txt_row2 {
+  display: flex;
+}
+
+.box__content {
+  flex: 1;
+}
+
+.box .box__images {
+  width: 100%;
+  margin: 100px 10px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.box .box__images .box-content {
+  color: rgb(247, 247, 255);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 100px 20px;
+  top: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.7);
+  transform: rotateY(90deg);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.box .box__images .box-img {
+  width: 100%;
+  height: 100%;
+}
+.box .box__images .box-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+.box .box__images .box-img {
+  width: 100%;
+  transform: rotateY(0);
+  transition: all 0.5s ease-in-out;
+}
+.box .box__images .box-img:hover {
+  transform: rotateY(-90deg);
+}
+
+.box .box__images:hover .box-content {
+  transform: rotateY(0);
+} */
+
+/*.box .box__images .box-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 120px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.7);
+  transform: rotateY(90deg);
+  transition: all 0.5s ease-in-out 0s;
+}*/
+
+
+
+-- end imagerotate.component.css
+-- start imagerotate.component.html
+
+<div class="box">
+  <div class="box_image_txt_row1">
+    <div class="box__content box__images">
+      <div class="box-img box-img1">
+        <img
+          class="singlebed"
+          src="../../../assets/images/SingleBedRoom.jpeg"
+          alt=""
+        />
+      </div>
+      <!-- <div class="box-content">
+        <h3>Krish</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+          repellendus doloremque neque.
+        </p>
+      </div> -->
+    </div>
+    <div class="box__content box__text">
+      <div class="box-img text1">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+          minus eius maiores dolorum ad nemo enim expedita est cupiditate
+          commodi doloremque, mollitia voluptatem, ipsam veritatis illum odit
+          reiciendis numquam quam porro totam harum omnis iste quibusdam
+          sapiente. Vitae harum provident rerum et ex blanditiis quisquam ea
+          aut. Commodi, obcaecati quis.
+        </p>
+      </div>
+      <!-- <div class="box-content">
+        <h3>Krish</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div> -->
+    </div>
+    <div class="box_image_txt_row2">
+      <div class="box__content box__text">
+        <div class="box-img text1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+            minus eius maiores dolorum ad nemo enim expedita est cupiditate
+            commodi doloremque, mollitia voluptatem, ipsam veritatis illum odit
+            reiciendis numquam quam porro totam harum omnis iste quibusdam
+            sapiente. Vitae harum provident rerum et ex blanditiis quisquam ea
+            aut. Commodi, obcaecati quis.
+          </p>
+        </div>
+        <!-- <div class="box-content">
+          <h3>Krish</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div> -->
+      </div>
+      <div class="box__content box__images">
+        <div class="box-img box-img1">
+          <img
+            class="double_bed_room"
+            src="../../../assets/images/DoubleBedRoom.jpeg"
+            alt=""
+          />
+        </div>
+        <!-- <div class="box-content">
+          <h3>Krish</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+            repellendus doloremque neque,
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+-- end imagerotate.component.html
