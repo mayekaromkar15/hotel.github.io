@@ -23,6 +23,7 @@ import { ContactusComponent } from './main/contactus/contactus.component';
 import { ParallexComponent } from './main/parallex/parallex.component';
 import { DynamicformpackageComponent } from './dynamicformpackage/dynamicformpackage.component';
 import { IntegeronlyDirective } from './integeronly.directive';
+import { AboutusmainComponent } from './main/aboutusmain/aboutusmain.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { IntegeronlyDirective } from './integeronly.directive';
     ParallexComponent,
     DynamicformpackageComponent,
     IntegeronlyDirective,
+    AboutusmainComponent,
   ],
   imports: [
     BrowserModule,
