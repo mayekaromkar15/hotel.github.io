@@ -21,6 +21,8 @@ import { ImageexpanderComponent } from './main/imageexpander/imageexpander.compo
 import { TestimonalComponent } from './main/testimonal/testimonal.component';
 import { ContactusComponent } from './main/contactus/contactus.component';
 import { ParallexComponent } from './main/parallex/parallex.component';
+import { DynamicformpackageComponent } from './dynamicformpackage/dynamicformpackage.component';
+import { IntegeronlyDirective } from './integeronly.directive';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ParallexComponent } from './main/parallex/parallex.component';
     TestimonalComponent,
     ContactusComponent,
     ParallexComponent,
+    DynamicformpackageComponent,
+    IntegeronlyDirective,
   ],
   imports: [
     BrowserModule,

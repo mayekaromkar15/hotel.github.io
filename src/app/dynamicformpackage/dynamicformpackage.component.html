@@ -1,0 +1,147 @@
+<ng-container *ngFor="let group of data.item; let table_index = index">
+  <h4>{{ group.code[0].display }}</h4>
+  <table border="2">
+    <tbody>
+      <div id="singleQuestionFormContainer"></div>
+      <tr *ngFor="let i of group.item; let k = index">
+        <td>{{ i.text }}</td>
+        <td>{{ i.type }}</td>
+        <td [ngSwitch]="i.type">
+          <div *ngSwitchCase="'string'">
+            <input type="number" placeholder="welcome friend" />
+          </div>
+          <div *ngSwitchCase="'choice'">
+            <select name="cars" id="cars" *ngIf="i.answerOption?.length > 0">
+              <option
+                *ngFor="let j of i.answerOption"
+                value="j.valueCoding.code"
+              >
+                {{ j.valueCoding.display }}
+              </option>
+            </select>
+            <input
+              type="text"
+              placeholder="decimal extra"
+              *ngIf="!i.answerOption || i.answerOption?.length == 0"
+            />
+          </div>
+          <div *ngSwitchCase="'decimal'">
+            <input type="text" placeholder="decimal d" />
+          </div>
+          <div *ngSwitchCase="'date'">
+            <input type="date" placeholder="Select date" />
+          </div>
+
+          <div *ngSwitchCase="'group'">
+            <ng-container *ngFor="let internalgroup of i.item">
+              <h6>{{ internalgroup.code[0].display }}</h6>
+              <td [ngSwitch]="internalgroup.type">
+                <div *ngSwitchCase="'string'">
+                  <input type="number" placeholder="welcome friend" />
+                </div>
+                <div *ngSwitchCase="'choice'">
+                  <select
+                    name="cars"
+                    id="cars"
+                    *ngIf="internalgroup.answerOption?.length > 0"
+                  >
+                    <option
+                      *ngFor="let j of internalgroup.answerOption"
+                      value="j.valueCoding.code"
+                    >
+                      {{ j.valueCoding.display }}
+                    </option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="{{ k }}"
+                    *ngIf="
+                      !internalgroup.answerOption ||
+                      internalgroup.answerOption?.length == 0
+                    "
+                  />
+                </div>
+                <div *ngSwitchCase="'decimal'">
+                  <input type="text" placeholder="decimal" />
+                </div>
+                <div *ngSwitchCase="'date'">
+                  <input type="date" placeholder="Select date" />
+                </div>
+                <div *ngSwitchCase="'boolean'">
+                  <input list="browsers" name="browser" id="browser" />
+                  <datalist id="browsers">
+                    <option value="YES"></option>
+                    <option value="NO"></option>
+                  </datalist>
+                </div>
+                <div *ngSwitchCase="'integer'">
+                  <input type="number" />
+                </div>
+                <div *ngSwitchCase="'dateTime'">
+                  <input type="datetime" name="" id="" />
+                </div>
+                <div *ngSwitchCase="'time'">
+                  <input type="time" name="" id="" />
+                </div>
+                <div *ngSwitchCase="'text'">
+                  <input type="text" placeholder="text item" />
+                </div>
+                <div *ngSwitchCase="'url'"></div>
+                <div *ngSwitchCase="'open-choice'">
+                  <input list="browsers" name="browser" id="browser" />
+                  <datalist id="browsers">
+                    <option value="Edge"></option>
+                    <option value="Firefox"></option>
+                    <option value="Chrome"></option>
+                    <option value="Opera"></option>
+                    <option value="Safari"></option>
+                  </datalist>
+                </div>
+              </td>
+            </ng-container>
+            <button (click)="removeGroup(table_index, k)" *ngIf="i.isDeletable">
+              Remove
+            </button>
+            <button
+              (click)="addAnotherGroup(table_index)"
+              *ngIf="k == group.item?.length - 1"
+            >
+              Add Another
+            </button>
+          </div>
+
+          <div *ngSwitchCase="'boolean'">
+            <input list="browsers" name="browser" id="browser" />
+            <datalist id="browsers">
+              <option value="YES"></option>
+              <option value="NO"></option>
+            </datalist>
+          </div>
+          <div *ngSwitchCase="'integer'">
+            <input type="number" />
+          </div>
+          <div *ngSwitchCase="'dateTime'">
+            <input type="datetime" name="" id="" />
+          </div>
+          <div *ngSwitchCase="'time'">
+            <input type="time" name="" id="" />
+          </div>
+          <div *ngSwitchCase="'text'">
+            <input type="text" placeholder="text item" />
+          </div>
+          <div *ngSwitchCase="'url'"></div>
+          <div *ngSwitchCase="'open-choice'">
+            <input list="browsers" name="browser" id="browser" />
+            <datalist id="browsers">
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+              <option value="Opera"></option>
+              <option value="Safari"></option>
+            </datalist>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>
