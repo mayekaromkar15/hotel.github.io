@@ -1,8 +1,7 @@
 <ng-container *ngFor="let group of data.item; let table_index = index">
   <h4>{{ group.code[0].display }}</h4>
   <table border="2">
-    <tbody>
-      <div id="singleQuestionFormContainer"></div>
+    <tbody *ngIf="group.item">
       <tr *ngFor="let i of group.item; let k = index">
         <td>{{ i.text }}</td>
         <td>{{ i.type }}</td>
@@ -139,6 +138,43 @@
               <option value="Opera"></option>
               <option value="Safari"></option>
             </datalist>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+
+    <!--  -->
+
+    <tbody *ngIf="!group.item">
+      <tr>
+        <!-- <td>{{ i.key }}</td>
+        <td>{{ i.value | json }}</td> -->
+
+        <td [ngSwitch]="group.type">
+          <div *ngSwitchCase="'boolean'">
+            <ng-container *ngIf="!group.enableWhen || getDisplayStatus(group)">
+              {{ group.text | json }}
+              <select
+                [(ngModel)]="group.answer[0].valueCoding.display"
+                name=""
+                id=""
+              >
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </ng-container>
+          </div>
+
+          <div *ngSwitchCase="'quantity'">
+            <ng-container *ngIf="!group.enableWhen || getDisplayStatus(group)">
+              {{ group.text | json }}
+              <input
+                type="number"
+                [(ngModel)]="group.answer[0].valueCoding.display"
+                name=""
+                id=""
+              />
+            </ng-container>
           </div>
         </td>
       </tr>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import formsjson from '../../assets/jsons/US_Surgeon_General_family_health_portrait.json';
+// import formsjson from '../../assets/jsons/US_Surgeon_General_family_health_portrait.json';
+import formsjson from '../../assets/jsons/Zika.json';
 
 @Component({
   selector: 'app-dynamicformpackage',
@@ -10,7 +11,15 @@ export class DynamicformpackageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.finalarrayfunct();
+    this.data.item.map((dataItem: any) => {
+      dataItem.answer = [
+        {
+          valueCoding: {
+            display: '',
+          },
+        },
+      ];
+    });
   }
 
   addAnotherGroup(table_index: any) {
@@ -162,6 +171,22 @@ export class DynamicformpackageComponent implements OnInit {
 
   removeGroup(table_index: any, row_index: any) {
     this.data.item[table_index].item.splice(row_index, 1);
+  }
+
+  getDisplayStatus(group: any) {
+    console.log(group);
+    console.log(this.data.item);
+    let displayStatus =
+      this.data.item[parseInt(group.enableWhen[0].question) - 1].answer[0]
+        .valueCoding.display == group.enableWhen[0].answerBoolean.toString();
+    console.log(displayStatus);
+    console.log(
+      this.data.item[parseInt(group.enableWhen[0].question) - 1].answer[0]
+        .valueCoding.display
+    );
+    console.log(group.enableWhen[0].question);
+    console.log(group.enableWhen[0].answerBoolean.toString());
+    return displayStatus;
   }
 
   finalArray: any = [];
